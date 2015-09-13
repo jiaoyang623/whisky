@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.uploadifive.js"></script>
+<script type="text/javascript" src="js/ziplog.js"></script>
+<link type="text/css'" rel="stylesheet" href="css/uploadifive.css">
+<title>ziplog</title>
+</head>
+<body>
+	<form>
+		<input id="upload" name="upload" type="file" multiple="true" />
+	</form>
+	<br />
+	<table id="table" class="tbl" width="1200px" cellspacing="0"
+		cellpadding="5" border="1" bordercolor="#a1a1a1"></table>
+	<script type="text/javascript">
+		$(function() {
+			$("#upload").uploadifive({
+				'formData' : {
+					'user' : 'daniel'
+				},
+				'uploadScript' : 'upload',
+				'onUploadComplete' : parse
+			});
+		});
+	</script>
+</body>
+</html>

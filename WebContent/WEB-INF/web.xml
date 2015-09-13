@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>Whisky</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>Alpha</servlet-name>
+		<servlet-class>org.daniel.jsp.servlet.Alpha</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Alpha</servlet-name>
+		<url-pattern>/Alpha</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>LiveSource</servlet-name>
+		<servlet-class>org.daniel.jsp.servlet.LiveSource</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LiveSource</servlet-name>
+		<url-pattern>/LiveSource</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Xstm</servlet-name>
+		<servlet-class>org.daniel.jsp.servlet.Xstm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Xstm</servlet-name>
+		<url-pattern>/xstm</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Buffer</servlet-name>
+		<servlet-class>org.daniel.jsp.servlet.Buffer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Buffer</servlet-name>
+		<url-pattern>/buffer</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UploadFile</servlet-name>
+		<servlet-class>org.daniel.jsp.servlet.UploadFile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadFile</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+</web-app>

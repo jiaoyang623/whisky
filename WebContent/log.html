@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/log.js"></script>
+<style>
+.tbl {
+	table-layout: fixed
+}
+</style>
+<title>Log Analyzer</title>
+</head>
+<body>
+	<div id="control"
+		style="background: #FFFFFF; padding: 10px; border: 1px; border-color: #666666">
+		<div id="source">
+			<p>
+				SouRce:<br />
+				<textarea rows="3" cols="90" name="url" id="text"
+					onkeyup="onChanged();"></textarea>
+				<br />
+			</p>
+		</div>
+		Type: <select id="type">
+			<option value="eclipse">eclipse</option>
+			<option value="logcat">logcat</option>
+		</select> Level: <input type="text" id="level" value="VDIWE"
+			onkeyup="onKeyUp('level');" /> Tag: <input type="text" id="tag"
+			onkeyup="onKeyUp('tag');" /> Keyword: <input type="text"
+			id="keyword" onkeyup="onKeyUp('keyword');" /> <input type="button"
+			value="Load" onclick="format();" /> <input type="button"
+			value="Show Source" onclick="showBox();" />
+	</div>
+	<br />
+	<div id="tableDiv">
+		<table id="table" class="tbl" width="1000px" cellspacing="0"
+			cellpadding="5" border="1" bordercolor="#a1a1a1"></table>
+	</div>
+</body>
+</html>
